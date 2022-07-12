@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 interface ContainerProps {
@@ -21,6 +21,10 @@ interface CircleProps {
 }
 
 function Circle({ bgColor, borderColor }: CircleProps) {
+  const [value, setValue] = useState<string | number>(0);
+  setValue(2);
+  setValue("Hi");
+
   return (
     <Container
       bgColor={bgColor}
